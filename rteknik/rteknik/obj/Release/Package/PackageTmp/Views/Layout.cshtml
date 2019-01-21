@@ -1,0 +1,20 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    var website = Model.Content.Ancestors().FirstOrDefault(x => x.DocumentTypeAlias == "website");
+}
+<html>
+<head>
+    <title>
+        @Umbraco.Content(website.Id).companyName @CurrentPage.title
+    </title>
+    <link href="~/Content/scss/main.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        @Umbraco.RenderMacro("nav")
+        <section>
+            @RenderBody()
+        </section>
+    </div>
+</body>
+</html>

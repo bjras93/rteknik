@@ -1,0 +1,41 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@{
+    var selection = Model.Content.Site().Children()
+                        .Where(x => x.IsVisible());
+    var website = Umbraco.Content(Model.Content.Site().Id);
+    var homePage = Umbraco.Content(Model.Content.Site().Id).homePage;
+    var homePageNode = Umbraco.Content(homePage.Id);
+    var homePageNavName = !string.IsNullOrEmpty(homePageNode.navigationName) ? homePageNode.navigationName : homePage.Name;
+}
+<nav class="navbar navbar-expand-lg">
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="navbar-brand">
+                @if (website.logo != null)
+                {
+                    var media = Umbraco.Media(website.logo.Id);
+                    <a class="nav-link" href="@homePage.Url">
+                        <img src="@media.Url" width="150" height="30" />
+                    </a>
+                }
+                else
+                {
+                    <a href="@homePage.Url">@homePageNavName</a>
+                }
+            </li>
+            @foreach (var item in selection)
+            {
+                var node = Umbraco.Content(item.Id);
+                if (!node.excludeFromNavigation)
+                {
+                    var navName = node.navigationName;
+                    var fallback = !string.IsNullOrEmpty(node.navigationName) ? navName : item.Name;
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="@item.Url">@fallback</a>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</nav>
