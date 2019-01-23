@@ -330,6 +330,7 @@
     <Content Include="config\Lang\ru-RU.user.xml" />
     <Content Include="config\Lang\sv-SE.user.xml" />
     <Content Include="config\Lang\zh-CN.user.xml" />
+    <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\scss\main.css">
       <DependentUpon>main.scss</DependentUpon>
     </Content>
@@ -1768,8 +1769,6 @@
     <Content Include="App_Data\ced954d1-8c0f-4abe-bdda-99e7a787d052\99217deb-7db9-47ae-b0fa-92da611aad17_package.manifest" />
     <Content Include="App_Data\ced954d1-8c0f-4abe-bdda-99e7a787d052\a9f7be7a-0676-4878-ad44-81887b516e54_SubNavigation.cshtml" />
     <Content Include="App_Data\ced954d1-8c0f-4abe-bdda-99e7a787d052\acb90010-8c3b-4352-9ef8-b42f71e56303_SectionHeader.cshtml" />
-    <Content Include="App_Data\Models\all.dll.path" />
-    <Content Include="App_Data\Models\models.hash" />
     <Content Include="App_Data\packages\installed\installedPackages.config" />
     <Content Include="App_Data\umbraco.config" />
     <Content Include="Content\scss\main.scss" />
@@ -1863,6 +1862,7 @@
     <Content Include="Content\scss\bootstrap\_type.scss" />
     <Content Include="Content\scss\bootstrap\_utilities.scss" />
     <Content Include="Content\scss\bootstrap\_variables.scss" />
+    <Content Include="Content\js\bootstrap.min.js.map" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -2038,6 +2038,7 @@
     <Content Include="Umbraco\Webservices\TreeDataService.ashx" />
     <Content Include="Umbraco\Xslt\Web.config" />
     <Content Include="Views\MacroPartials\nav.cshtml" />
+    <Content Include="Views\Partials\Footer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

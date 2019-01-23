@@ -10,11 +10,12 @@
     <link href="~/Content/scss/main.min.css" rel="stylesheet" />
 </head>
 <body>
-    <div>
-        @Umbraco.RenderMacro("nav")
-        <section>
-            @RenderBody()
-        </section>
-    </div>
+    @Umbraco.RenderMacro("nav")
+    <section>
+        @RenderBody()
+    </section>
+    @Html.Partial("Footer", website)
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/bootstrap.min.js"></script>
 </body>
 </html>

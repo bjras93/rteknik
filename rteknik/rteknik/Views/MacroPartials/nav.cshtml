@@ -8,8 +8,16 @@
     var homePageNode = Umbraco.Content(homePage.Id);
     var homePageNavName = !string.IsNullOrEmpty(homePageNode.navigationName) ? homePageNode.navigationName : homePage.Name;
 }
+
+
 <nav class="navbar navbar-expand-lg">
-    <div class="collapse navbar-collapse">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
             <li class="navbar-brand">
                 @if (website.logo != null)

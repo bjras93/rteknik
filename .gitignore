@@ -1,2 +1,5 @@
 *.suo
 .vs
+rteknik/rteknik/App_Data/TEMP/
+rteknik/rteknik/App_Data/Logs/
+rteknik/rteknik/obj/

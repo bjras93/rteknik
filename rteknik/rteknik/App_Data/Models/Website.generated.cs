@@ -53,5 +53,32 @@ namespace Umbraco.Web.PublishedContentModels
 		{
 			get { return this.GetPropertyValue<string>("companyName"); }
 		}
+
+		///<summary>
+		/// Footer
+		///</summary>
+		[ImplementPropertyType("footer")]
+		public IEnumerable<string> Footer
+		{
+			get { return this.GetPropertyValue<IEnumerable<string>>("footer"); }
+		}
+
+		///<summary>
+		/// Logo
+		///</summary>
+		[ImplementPropertyType("logo")]
+		public IPublishedContent Logo
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("logo"); }
+		}
+
+		///<summary>
+		/// Homepage
+		///</summary>
+		[ImplementPropertyType("umbracoInternalRedirectId")]
+		public IPublishedContent UmbracoInternalRedirectId
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("umbracoInternalRedirectId"); }
+		}
 	}
 }

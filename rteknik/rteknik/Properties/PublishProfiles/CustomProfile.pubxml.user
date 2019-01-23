@@ -1501,6 +1501,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Global.asax">
       <publishTime>01/21/2019 13:38:38</publishTime>
     </File>
+    <File Include="Media/1001/placeholdercom-logo3.png">
+      <publishTime>01/21/2019 16:08:15</publishTime>
+    </File>
     <File Include="Media/Web.config">
       <publishTime>01/21/2019 13:38:37</publishTime>
     </File>
