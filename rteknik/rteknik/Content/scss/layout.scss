@@ -1,1 +1,10 @@
-﻿
+﻿ul {
+    padding-inline-start: 40px;
+}
+.main-section {
+    min-height: 760px;
+
+    @media only screen and (max-width: 600px) {
+        min-height: inherit;
+    }
+}

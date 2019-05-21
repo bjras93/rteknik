@@ -11,10 +11,12 @@
 </head>
 <body>
     @Umbraco.RenderMacro("nav")
-    <section>
+    <section class="main-section pl-5 pt-3">
         @RenderBody()
     </section>
-    @Html.Partial("Footer", website)
+    <section class="pl-5">
+        @Html.Partial("Footer", website)
+    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="~/Content/js/bootstrap.min.js"></script>
 </body>
