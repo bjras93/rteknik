@@ -4,17 +4,18 @@
 }
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>
         @Umbraco.Content(website.Id).companyName @CurrentPage.title
     </title>
     <link href="~/Content/scss/main.min.css" rel="stylesheet" />
 </head>
-<body>
+<body class="bg-light">
     @Umbraco.RenderMacro("nav")
-    <section class="main-section pl-5 pt-3">
+    <section class="main-section pt-4 bg-white">
         @RenderBody()
     </section>
-    <section class="pl-5">
+    <section class="bg-light">
         @Html.Partial("Footer", website)
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
